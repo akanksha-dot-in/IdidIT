@@ -1,0 +1,6 @@
+{
+  "name": "IdidIT",
+  "description": "A women-centric life operating system and deadline rescue assistant.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

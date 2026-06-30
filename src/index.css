@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Syne", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-void: #0D0C10;
+  --color-bloom: #B5477A;
+  --color-ink: #F0EDF8;
+  --color-surface: #15141A;
+  --color-muted: #544248;
+  --color-petal: #E8779A;
+  --color-growth: #7D9B3A;
+  --color-dusk: #AFA9EC;
+  --color-warmth: #EF9F27;
+  --color-thrive: #5DCAA5;
+  --color-ghost: #6E6A7C;
+  --color-signal: #FF4B5C;
+  --color-surface-variant: #36333e;
+  --color-outline-variant: #544248;
+}
+
+/* Base resets or styles */
+body {
+  background-color: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Tilted hero */
+.tilted-hero {
+  transform: rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tilted-hero:hover {
+  transform: rotate(-1deg) scale(1.02);
+  box-shadow: 0 12px 40px rgba(181, 71, 122, 0.2);
+}
+
+/* Custom fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
